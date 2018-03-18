@@ -7,3 +7,12 @@ RUN pip --no-cache-dir install \
         jupyterlab \
         bokeh \
         xlrd
+
+EXPOSE 8888
+CMD ["jupyter", \
+    "lab", \
+    "--ip=*", \
+    "--port=8888", \
+    "--no-browser", \
+    "--allow-root"]
+
